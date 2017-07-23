@@ -1,0 +1,37 @@
+{
+  "name": "express-router-testing-sample",
+  "version": "1.0.0",
+  "description": "A sample project to demo how to test express routers.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./app.js",
+    "debug": "node --inspect --debug-brk ./app.js",
+    "test": "ava --verbose",
+    "debugTest": "node --inspect --debug-brk node_modules/ava/profile.js test/routersTest_async.js"
+  },
+  "keywords": [
+    "testing",
+    "express",
+    "ava",
+    "sinon",
+    "supertest"
+  ],
+  "author": "liok3187@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3"
+  },
+  "devDependencies": {
+    "ava": "^0.20.0",
+    "sinon": "^2.3.6",
+    "supertest": "^3.0.0"
+  },
+  "ava": {
+    "files": [
+      "./test/*.js"
+    ],
+    "source": [
+      "**/*.{js}"
+    ]
+  }
+}
